@@ -369,6 +369,9 @@ h2 {
   .about-image {
     display: none;
   }
+  .cooperate-list {
+    flex-direction: column;
+  }
 }
 
 .cooperate {
