@@ -361,7 +361,8 @@ h2 {
     width: auto;
   }
   .content h1 {
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 300;
   }
   .nav-links {
     display: none;
