@@ -1,0 +1,288 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #000;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    rgba(12, 3, 51, 0.3),
+    75%,
+    rgba(0, 0, 0, 1)
+  );
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(12, 3, 51, 0.1);
+  z-index: 1000;
+}
+nav .logo {
+  width: 80px;
+}
+nav ul {
+  position: sticky;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 40px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+nav ul li a:active {
+  color: green;
+}
+nav ul li i {
+  color: #fff;
+  size: 17px;
+}
+.content {
+  text-align: center;
+}
+.content h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+  transition: 0.5s;
+  letter-spacing: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+.about {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about h1 {
+  text-align: center;
+}
+.about-content {
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-around; /* Adjusted for space between text and image */
+  padding: 20px;
+  margin: 30px;
+}
+.about-text,
+.about-image {
+  flex: 1; /* Gives equal space to both text and image */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-text {
+  margin-right: 10px; /* Adds some spacing between text and image */
+  font-size: 18px; /* Adjusted for professional readability */
+  text-align: left; /* Aligns text to left for a more professional appearance */
+  font-weight: normal;
+  border-radius: 3%;
+  transition: 0.5s;
+}
+.about-image img {
+  border-radius: 3%; /* Optional: Adds rounded corners to your image */
+}
+/* Team section styles */
+.team {
+  color: #ffffff; /* White text color */
+}
+.team h1 {
+  text-align: center;
+  color: #00ff00; /* Green color for headings */
+}
+.team ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around; /* Centers items in the line */
+  flex-wrap: wrap; /* Allows items to wrap */
+  padding: 0;
+}
+.team li {
+  text-align: center;
+  background-color: #333333; /* Darker shade */
+  color: #ffffff; /* White text */
+  padding: 20px;
+  margin: 10px;
+  width: 250px; /* Adjust width to control item size */
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+.team h2,
+.team h3,
+.team p,
+.team a {
+  margin: 5px 0;
+}
+.team a {
+  color: #00ff00; /* Green links */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+.team li:hover {
+  background-color: #444444; /* Hover background */
+  box-shadow: 0px 0px 15px #fff; /* Subtle shadow */
+}
+.team a:hover {
+  color: #cccccc; /* Hover color for links */
+}
+.team-member-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  filter: grayscale(100%); /* Black and white filter */
+}
+.advisory {
+  color: white;
+  border: 2px solid red;
+}
+.advisory h1 {
+  text-align: center;
+}
+.contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+.contact img {
+  width: 50%;
+  height: 50%;
+}
+.contact h1 {
+  color: white;
+  margin-bottom: 30px;
+}
+form {
+  width: 90%;
+  max-width: 600px;
+}
+.input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row .input-group {
+  flex-basis: 48%;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 15px;
+}
+label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  pointer-events: none;
+  color: #fff;
+  transition: 0.3s;
+}
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: green;
+}
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+}
+.btn:hover {
+  background: green;
+}
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .hero,
+  .about-content,
+  .team ul,
+  .contact {
+    flex-direction: column;
+  }
+  .about-text,
+  .about-image,
+  .team li,
+  .contact img {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .row .input-group {
+    flex-basis: 100%;
+  }
+  nav ul {
+    display: none;
+  }
+  .back-video {
+    display: none;
+  }
+}

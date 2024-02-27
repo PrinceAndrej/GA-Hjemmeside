@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gjenbruksarkitektene</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/425845fb8d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.css"
+  />
+  </head>
+  <body>
+    <div class="hero">
+      <video
+        autoplay
+        loop
+        muted
+        plays-inline
+        class="back-video"
+        id="back-video"
+      >
+        <source src="images/bakgrunn.mp4" type="video/mp4" />
+      </video>
+
+      <nav>
+        <img src="images/logo.png" alt="logo" class="logo" />
+        <ul>
+          <li><a href="#about">Om oss</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#advisory">Advisory board</a></li>
+          <li><a href="#contact" >Kontakt oss</a></li>
+          <li>
+            <i class="fas fa-pause" onclick="pause()"></i>
+          </li>
+        </ul>
+      </nav>
+      <div class="content">
+        <h1>GJENBRUKSARKITEKTENE</h1>
+      </div>
+    </div>
+    </div>
+    <div class="about" id="about" data-aos="fade-up">
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-right">
+          <p>
+            Vår startup begynte som et studentprosjekt ved HVL Skape.<br> Vi ble tildelt tilskuddet “program for ideutvikling” på 100.000 kr for å utvikle vår MVP. Med base i Bergen, ledes selskapet av Daniel Sandvik Fostervold og Jørgen Skaftun. 
+            <br><br>Nylig deltok vi i GründerAcademy, Nordens største akseleratorprogram etter å ha blitt håndplukket blant over 1000 søkere. Dette, sammen med tilskuddet fra HVL, understreker tydelig potensialet i vår idé. 
+            <br><br>Under GründerAcademy har vi opparbeidet verdifull erfaring og samarbeidet tett med erfarne mentorer, som nå er en integrert del av vårt team. Eksterne mentorer og støttespillere bidrar også aktivt i prosessen. Med støtten fra HVL’s “Program for idéutvikling” er vi nå klare for MVP.
+          </p>
+        </div>
+        <div class="about-image" data-aos="fade-left">
+          <img src="images/logo.png" alt="About Us Image" style="max-width:100%;height:auto;">
+        </div>
+      </div>
+    </div>
+    
+    <div class="team" id="team" data-aos="fade-up">
+      <h1>Team</h1>
+      <div class="team-content">
+        <ul>
+          <li data-aos="fade-up">
+            <img src="images/daniel2 2.jpeg" alt="Daniel Fostervold" class="team-member-img"> <!-- Image for Daniel -->
+            <h2>Daniel Fostervold</h2>
+            <h3>CEO, co-founder</h3>
+            <p>BsC innovation and business development MsC innovation and leadership</p>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li data-aos="fade-down">
+            <img src="images/jørgen2.jpeg" alt="Jørgen Skaftun" class="team-member-img"> <!-- Image for Jørgen -->
+            <h2>Jørgen Skaftun</h2>
+            <h3>COO</h3>
+            <p>BsC Human resources and MsC innovation and leadership</p>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li data-aos="fade-up">
+            <img src="images/keval.jpeg" alt="Keval Gondaliya" class="team-member-img"> <!-- Image for Keval -->
+            <h2>Keval Gondaliya</h2>
+            <h3>CTO</h3>
+            <p>Full Stack Developer (Web and Mobile), Tech Lead and Project Manager</p>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li data-aos="fade-up">
+            <img src="images/keval.jpeg" alt="Keval Gondaliya" class="team-member-img"> <!-- Image for Keval -->
+            <h2>Keval Gondaliya</h2>
+            <h3>CTO</h3>
+            <p>Full Stack Developer (Web and Mobile), Tech Lead and Project Manager</p>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li data-aos="fade-up">
+            <img src="images/keval.jpeg" alt="Keval Gondaliya" class="team-member-img"> <!-- Image for Keval -->
+            <h2>Keval Gondaliya</h2>
+            <h3>CTO</h3>
+            <p>Full Stack Developer (Web and Mobile), Tech Lead and Project Manager</p>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <div class="advisory" id="advisory" data-aos="fade-up">
+      <h1>Advisory Board</h1>
+      <div class="advisory-content">
+        <p>
+          Hoang Minh Trinh Head of ventures
+          <br> Agens Jostein Flatoy daglig leder
+        </p>
+      </div>
+    </div>
+    <div class="contact" id="contact">
+      <img src="images/contact.jpeg" alt="">
+      <form>
+        <h1>Kontakt oss</h1>
+        <div class="row">
+          <div class="input-group">
+            <input type="text" id="name" required>
+            <label for="name"><i class="fas fa-user"></i> Navn</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="number" required>
+            <label for="number"><i class="fas fa-phone-square-alt"></i> Telefon</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <input type="text" id="email" required>
+          <label for="email"><i class="fas fa-envelope"></i> Email</label>
+        </div>
+        <div class="input-group">
+          <textarea id="message"  rows="8" required></textarea>
+          <label for="message"><i class="fas fa-comments"></i> Melding</label>
+        </div>
+        <button type="submit" id="submit">SEND <i class="fas fa-paper-plane"></i> </button>
+      </form>
+    </div>
+    
+    <div class="cooperate" id="cooperate" data-aos="fade-up">
+      <h1>Våre samarbeidspartnere</h1>
+      <ul class="cooperate-list">
+        <li><img src="/images/studiox.png" alt="" /></li>
+        <li><img src="/images/hvl.png" alt="" /></li>
+        <li><img src="/images/ventures.png" alt="" /></li>
+        <li><img src="/images/grunder-academy.jpg" alt="" /></li>
+      </ul>
+    <script src="script.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // Adjust the animation duration as needed
+      once: false, // Set to true if you want animations to occur only once
+    });
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  </body>
+</html>
