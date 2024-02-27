@@ -62,44 +62,6 @@ nav ul li i {
   color: #fff;
   size: 17px;
 }
-@media only screen and (max-width: 768px) {
-  nav .nav-links {
-    display: none;
-  }
-
-  nav .mobile-menu-btn {
-    display: block;
-    cursor: pointer;
-  }
-
-  nav .mobile-menu-btn span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-  }
-
-  nav .mobile-menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(12, 3, 51, 0.1);
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  nav .mobile-menu a {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    font-size: 17px;
-    margin-bottom: 10px;
-  }
-}
-
 .content {
   text-align: center;
 }
@@ -158,14 +120,15 @@ nav ul li i {
 }
 .about-text {
   margin-right: 10px; /* Adds some spacing between text and image */
-  font-size: 18px; /* Adjusted for professional readability */
-  text-align: left; /* Aligns text to left for a more professional appearance */
-  font-weight: normal;
+  font-size: 20px; /* Adjusted for professional readability */
+  text-align: center; /* Aligns text to left for a more professional appearance */
+  font-weight: lighter;
   border-radius: 3%;
   transition: 0.5s;
 }
 .about-image img {
-  border-radius: 3%; /* Optional: Adds rounded corners to your image */
+  border-radius: 3%;
+  width: 70%;
 }
 /* Existing styles */
 .team {
@@ -174,9 +137,14 @@ nav ul li i {
 
 .team h1 {
   text-align: center;
-  color: #00ff00; /* Green color for headings */
+  color: #fff; /* Green color for headings */
 }
-
+.team h2 {
+  color: #fff;
+}
+.team h3 {
+  color: #666666;
+}
 .team ul {
   list-style: none;
   display: flex;
@@ -194,6 +162,7 @@ nav ul li i {
   width: 250px; /* Adjust width to control item size */
   box-sizing: border-box;
   transition: all 0.3s ease; /* Smooth transition */
+  border-radius: 10%;
 }
 
 .team h2,
@@ -204,17 +173,22 @@ nav ul li i {
 }
 
 .team a {
-  color: #00ff00; /* Green links */
+  color: #555555; /* Green links */
   transition: color 0.3s ease; /* Smooth transition */
+}
+.team i {
+  font-size: 30px;
 }
 
 .team li:hover {
   background-color: #444444; /* Hover background */
   box-shadow: 0px 0px 15px #fff; /* Subtle shadow */
+  .team-member-img {
+    filter: grayscale(0%);
+  }
 }
-
 .team a:hover {
-  color: #cccccc; /* Hover color for links */
+  color: #0077b5;
 }
 
 .team-member-img {
@@ -224,56 +198,112 @@ nav ul li i {
   margin-bottom: 10px;
   object-fit: cover;
   filter: grayscale(100%); /* Black and white filter */
+  border: 2px solid white;
 }
 
-.advisory {
-  color: white;
-  border: 2px solid red;
+.advisory-container {
+  margin-top: 50px;
+  color: #ffffff;
 }
-.advisory h1 {
+
+.advisory-container h1 {
   text-align: center;
+  color: #fff;
 }
+
+.advisory-container h2 {
+  color: #fff;
+}
+
+.advisory-container h3 {
+  color: #666666;
+}
+
+.advisory-content {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.advisory-member {
+  text-align: center;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  border-radius: 10%;
+}
+
+.advisory-container h2,
+.advisory-container h3,
+.advisory-container p,
+.advisory-container a {
+  margin: 5px 0;
+}
+
+.advisory-container a {
+  color: #555555;
+  transition: color 0.3s ease;
+}
+
+.advisory-member:hover {
+  background-color: #444444;
+  box-shadow: 0px 0px 15px #fff;
+  .advisory-member-img {
+    filter: grayscale(0);
+  }
+}
+
+.advisory-member-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+.advisory-container img {
+  width: 100px;
+  border: 2px solid white;
+}
+
 .contact {
   height: 100vh;
   display: flex;
-  flex-direction: column; /* Adjust the layout for smaller screens */
   align-items: center;
   justify-content: space-between;
   margin: 20px;
 }
-
 .contact img {
-  width: 100%; /* Adjust image width to 100% for responsiveness */
-  height: auto; /* Maintain aspect ratio */
+  width: 50%;
+  height: 50%;
+  filter: grayscale(100%);
 }
-
 .contact h1 {
   color: white;
   margin-bottom: 30px;
 }
-
 form {
   width: 90%;
   max-width: 600px;
-  margin: 0 auto; /* Center the form */
 }
-
 .input-group {
   margin-bottom: 30px;
   position: relative;
 }
-
 .row {
   display: flex;
-  flex-direction: column; /* Adjust layout for smaller screens */
   align-items: center;
   justify-content: space-between;
 }
-
 .row .input-group {
-  flex-basis: 100%; /* Take up full width on smaller screens */
+  flex-basis: 48%;
 }
-
 input,
 textarea {
   width: 100%;
@@ -284,7 +314,6 @@ textarea {
   background: transparent;
   font-size: 15px;
 }
-
 label {
   height: 100%;
   position: absolute;
@@ -295,7 +324,6 @@ label {
   cursor: text;
   transition: 0.2s;
 }
-
 button {
   padding: 10px 0;
   color: #fff;
@@ -305,7 +333,6 @@ button {
   width: 100%;
   cursor: pointer;
 }
-
 input:focus ~ label,
 input:valid ~ label,
 textarea:focus ~ label,
@@ -313,7 +340,6 @@ textarea:valid ~ label {
   top: -35px;
   font-size: 14px;
 }
-
 h2 {
   text-align: center;
   color: #fff3;
@@ -329,6 +355,19 @@ h2 {
   .row .input-group {
     flex-basis: 100%;
     width: 100%;
+  }
+
+  .hero {
+    width: auto;
+  }
+  .content h1 {
+    font-size: 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .about-image {
+    display: none;
   }
 }
 
@@ -352,31 +391,4 @@ h2 {
   height: 100px;
   margin-left: 50px;
   border: 0.1px solid #fff;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 0 3%; /* Adjust padding for smaller screens */
-  }
-
-  nav {
-    padding: 20px 3%; /* Adjust padding for smaller screens */
-  }
-
-  nav ul li {
-    margin-left: 10px; /* Adjust margin for smaller screens */
-  }
-
-  nav ul li a {
-    font-size: 13px; /* Adjust font size for smaller screens */
-  }
-
-  nav ul li i {
-    size: 13px; /* Adjust font size for smaller screens */
-  }
-
-  .content h1 {
-    font-size: 24px; /* Adjust font size for smaller screens */
-    letter-spacing: 2px; /* Adjust letter spacing for smaller screens */
-  }
 }
