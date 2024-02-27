@@ -30,16 +30,21 @@
 
       <nav>
         <img src="images/logo.png" alt="logo" class="logo" />
-        <ul>
-          <li><a href="#about">Om oss</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#advisory">Advisory board</a></li>
-          <li><a href="#contact" >Kontakt oss</a></li>
-          <li>
-            <i class="fas fa-pause" onclick="pause()"></i>
-          </li>
+        <ul class="nav-links">
+            <li><a href="#about">Om oss</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#advisory">Advisory board</a></li>
+            <li><a href="#contact">Kontakt oss</a></li>
+            <li><i class="fas fa-pause" onclick="pause()"></i></li>
         </ul>
-      </nav>
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="mobile-menu"></ul>
+    </nav>
+    
       <div class="content">
         <h1>GJENBRUKSARKITEKTENE</h1>
       </div>
@@ -100,15 +105,7 @@
               <i class="fa-brands fa-linkedin"></i>
             </a>
           </li>
-          <li data-aos="fade-up">
-            <img src="images/keval.jpeg" alt="Keval Gondaliya" class="team-member-img"> <!-- Image for Keval -->
-            <h2>Keval Gondaliya</h2>
-            <h3>CTO</h3>
-            <p>Full Stack Developer (Web and Mobile), Tech Lead and Project Manager</p>
-            <a href="#">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </li>
+          
 
         </ul>
       </div>

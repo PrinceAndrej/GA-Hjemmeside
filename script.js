@@ -32,3 +32,9 @@ btn.addEventListener("click", function (e) {
     Body: body,
   }).then((message) => alert(message));
 });
+
+function toggleMobileMenu() {
+  const mobileMenu = document.querySelector(".mobile-menu");
+  mobileMenu.style.display =
+    mobileMenu.style.display === "block" ? "none" : "block";
+}
